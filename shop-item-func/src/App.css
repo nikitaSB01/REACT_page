@@ -1,5 +1,5 @@
 body {
-  margin: 0;
+  margin: 0 20px;
   font-family: Arial, sans-serif;
   color: #000; /* Черный цвет текста */
   background: #ececec; /* Светло-серый фон */
@@ -21,30 +21,32 @@ body {
 }
 
 .highlight-window {
-  position: relative; /* Родитель для абсолютного позиционирования overlay */
-  width: 700px; /* Ширина блока (можно изменить) */
-  height: 850px; /* Высота блока (можно изменить) */
-  background: #f9f9f9; /* Задний фон на случай, если изображение не загрузится */
-  overflow: hidden; /* Скрываем содержимое, выходящее за пределы */
+  position: relative;
+  width: 400px; /* Фиксированная ширина */
+  height: 700px; /* Фиксированная высота */
+  background: #f9f9f9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
 }
 
 .highlight-overlay {
-  position: absolute; /* Абсолютное позиционирование внутри родителя */
-  top: 0;
-  left: 0;
-  width: 100%; /* Блок занимает всю ширину родителя */
-  height: 100%; /* Блок занимает всю высоту родителя */
-  overflow: hidden; /* Скрывает части изображения, выходящие за границы блока */
-  z-index: 1; /* Убедитесь, что он находится поверх других элементов */
-  display: flex; /* Центрирование содержимого */
-  justify-content: center; /* Горизонтальное выравнивание */
-  align-items: center; /* Вертикальное выравнивание */
+  position: relative;
+  width: 500px; /* Ширина контейнера */
+  height: 700px; /* Высота контейнера */
+  overflow: hidden; /* Обрезка содержимого за границами контейнера */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f9f9f9; /* Фон на случай, если изображение не загрузится */
 }
+
 .highlight-overlay img {
-  width: 100%; /* Растягиваем изображение на всю ширину блока */
-  height: 100%; /* Растягиваем изображение на всю высоту блока */
-  object-fit: cover; /* Изображение заполняет блок, сохраняя пропорции */
-  object-position: center; /* Центрируем изображение */
+  width: 100%; /* Ширина изображения равна ширине контейнера */
+  height: 100%; /* Высота изображения равна высоте контейнера */
+  object-fit: cover; /* Масштабируем изображение, чтобы заполнить контейнер */
+  object-position: center; /* Центрируем изображение внутри контейнера */
 }
 
 .window {

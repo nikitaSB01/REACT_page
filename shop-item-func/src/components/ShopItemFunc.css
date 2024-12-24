@@ -1,4 +1,13 @@
-
+.window {
+    display: inline-block; /* Чтобы размер зависел от содержимого */
+    max-width: 600px; /* Ограничение максимальной ширины */
+    width: 100%; /* Автоматическая ширина до 600px */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    background: white;
+    padding: 20px; /* Отступы внутри блока */
+    box-sizing: border-box; /* Учитываем padding в ширине блока */
+}
 
 .main-content {
     font-family: Arial, sans-serif;
@@ -6,7 +15,6 @@
     background: #fff;
     border: 1px solid #ccc;
     border-radius: 4px;
-
 }
 
 .main-content h1,
@@ -37,7 +45,7 @@
 }
 
 .main-content .price {
-    font-size: 1.2em;
+    font-size: 2.2em;
     font-weight: bold;
 }
 
@@ -53,4 +61,3 @@
 .main-content button:hover {
     background: #0056b3;
 }
-
