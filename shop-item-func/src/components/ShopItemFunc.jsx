@@ -1,6 +1,6 @@
 /* import React from 'react'; */
 import PropTypes from 'prop-types';
-import './ShopItemFunc.css'; // Подключим стили (создадим позже)
+import '../App.css';
 
 
 const ShopItemFunc = ({ item }) => {
